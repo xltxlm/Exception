@@ -9,5 +9,12 @@ namespace xltxlm\exception;
 class Exception extends \Exception
 {
 
+    /**
+     * LockFall_Exception constructor.
+     */
+    public function __construct()
+    {
+        parent::__construct(static::class);
+    }
 
 }
