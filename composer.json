@@ -1,0 +1,21 @@
+{
+  "name": "xltxlm/exception",
+  "authors": [
+    {
+      "name": "copygithub",
+      "email": "xltxlm@qq.com"
+    }
+  ],
+  "description":"异常的定义",
+  "require": {
+    "php": ">=7.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "xltxlm\\exception\\": [
+        "src/",
+        "./"
+      ]
+    }
+  }
+}
