@@ -12,9 +12,13 @@ class Exception extends \Exception
     /**
      * LockFall_Exception constructor.
      */
-    public function __construct()
+    public function __construct(string $message = "", int $code = 0)
     {
-        parent::__construct(static::class);
+        if ($message) {
+            parent::__construct($message, $code);
+        } else {
+            parent::__construct(static::class, $code);
+        }
     }
 
 }
