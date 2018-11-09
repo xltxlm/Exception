@@ -6,7 +6,7 @@
       "email": "xltxlm@qq.com"
     }
   ],
-  "description":"异常的定义",
+  "description": "异常的定义",
   "require": {
     "php": ">=7.1"
   },
@@ -16,6 +16,9 @@
         "src/",
         "./"
       ]
-    }
+    },
+    "files": [
+      "src/p.php"
+    ]
   }
 }
