@@ -7,11 +7,11 @@
  */
 
 /**
- * 打印错误信息
+ * 打印错误信息,没参数的时候,相当于调试
  * @param $var
  * @param bool $trace
  */
-function p($var, $trace = false)
+function p($var = null, $trace = false)
 {
     static $uniqid;
     if (!$uniqid) {
@@ -19,8 +19,13 @@ function p($var, $trace = false)
     }
     $debug_backtrace_old = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
     $debug_backtrace = $debug_backtrace_old[0];
-    error_log('=>[begin]' . microtime(true));
-    error_log(var_export($var, true));
+    if ($var) {
+        error_log('=>[begin]' . microtime(true));
+        error_log(var_export($var, true));
+    } else {
+        error_log("Debug===[$uniqid]=={$debug_backtrace['file']}:{$debug_backtrace['line']}===Debug");
+        return '';
+    }
     if ($trace) {
         error_log((new \Exception())->getTraceAsString());
     }
