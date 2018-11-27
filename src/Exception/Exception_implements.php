@@ -6,7 +6,4 @@ namespace xltxlm\exception\Exception;
 */
 abstract class Exception_implements
 {
-
-
-
 }

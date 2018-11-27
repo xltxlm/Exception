@@ -6,6 +6,13 @@
  * Time: 上午11:28
  */
 
+
+
+function 跑()
+{
+    call_user_func_array('p',func_get_args());
+}
+
 /**
  * 打印错误信息,没参数的时候,相当于调试
  * @param $var
