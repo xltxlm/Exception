@@ -6,11 +6,12 @@
  * Time: 上午11:28
  */
 
-
+//切割php调试日志,按照小时进行分组
+ini_set('error_log', "/opt/logs/php_errors_" . date('YmdH') . ".log");
 
 function 跑()
 {
-    call_user_func_array('p',func_get_args());
+    call_user_func_array('p', func_get_args());
 }
 
 /**
