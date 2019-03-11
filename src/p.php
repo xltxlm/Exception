@@ -7,7 +7,7 @@
  */
 
 //切割php调试日志,按照小时进行分组
-ini_set('error_log', "/opt/logs/php_errors_" . date('YmdH') . ".log");
+ini_set('error_log', "/opt/logs/php_errors_" . date('Ymd') . ".log");
 
 function 跑()
 {
