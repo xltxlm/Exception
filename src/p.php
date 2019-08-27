@@ -31,7 +31,7 @@ function p($var = null, $trace = false)
         error_log('=>[begin]' . microtime(true));
         error_log(var_export($var, true));
     } else {
-        error_log("Debug===[$uniqid]=={$debug_backtrace['file']}:{$debug_backtrace['line']}===Debug");
+        error_log("Debug===[$uniqid]=={$debug_backtrace['file']}:{$debug_backtrace['line']}===[EMPTY]");
         return '';
     }
     if ($trace) {
