@@ -21,6 +21,8 @@ function 跑()
  */
 function p($var = null, $trace = false)
 {
+    //每次都需要重置日期，因为可能有定时任务死循环在执行。。。
+    ini_set('error_log', "/opt/logs/php_errors_" . date('Ymd') . ".log");
     static $uniqid;
     if (!$uniqid) {
         $uniqid = uniqid();
